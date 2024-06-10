@@ -13,7 +13,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from forms import CreatePostForm, SignUpForm, LogInForm, CommentForm
 import os
 
-
+print(os.environ.get('FLASK_SECRET_KEY'))
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('FLASK_SECRET_KEY')
 ckeditor = CKEditor(app)
